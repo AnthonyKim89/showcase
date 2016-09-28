@@ -8,8 +8,10 @@ module.exports = route;
 function route($stateProvider) {
     // Configure states here
     $stateProvider
-        .state('home', {
+        .state('dashboard', {
             url: '/',
-            template: require('./templates/home.tpl.jade')
+            template: require('./templates/dashboard.tpl.jade'),
+            controller: 'DashboardCtrl as vm',
+            authenticate: true
         });
 }
